@@ -1,0 +1,74 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Access Guard einrichten",
+        "description": "Access Guard schränkt einzelne Benutzer ein (Seitenleiste, Medien, Kameras usw.) und protokolliert, wer sich wann von welchem Gerät angemeldet hat. Die Einstellungen findest du danach unter „Konfigurieren“, die Übersicht im neuen Menüpunkt „Zugriffe“."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Access Guard ist bereits eingerichtet."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Access Guard",
+        "menu_options": {
+          "select_user": "Benutzer einschränken",
+          "logging": "Protokoll-Einstellungen"
+        }
+      },
+      "select_user": {
+        "title": "Benutzer auswählen",
+        "description": "Einschränkungen wirken für alle Geräte dieses Benutzers. Bei Administratoren greifen sie nur teilweise – Mitarbeiter sollten normale Benutzer sein.",
+        "data": {
+          "user_id": "Benutzer"
+        }
+      },
+      "restrictions": {
+        "title": "Einschränkungen für {user}",
+        "description": "**Gesperrt** heißt: aus der Seitenleiste entfernt und auch per Link oder API nicht erreichbar. **Ausgeblendet** heißt: nur aus der Seitenleiste entfernt. Offene Browser-Tabs übernehmen die Änderung nach dem Neuladen.",
+        "data": {
+          "blocked_areas": "Gesperrte Bereiche",
+          "blocked_dashboards": "Gesperrte Dashboards",
+          "hidden_panels": "Ausgeblendete Menüpunkte",
+          "hidden_entities": "Ausgeblendete Entitäten"
+        },
+        "data_description": {
+          "blocked_areas": "Sperrt den Bereich samt Daten. Verlauf, Logbuch, To-do und Kalender funktionieren dann auch in Dashboard-Karten nicht mehr.",
+          "blocked_dashboards": "Diese Dashboards kann der Benutzer weder sehen noch öffnen.",
+          "hidden_panels": "Nur ausblenden – der Bereich bleibt per Link erreichbar.",
+          "hidden_entities": "Diese Entitäten sieht der Benutzer nirgends (Dashboards, Suche, Verlauf) und kann sie nicht schalten."
+        }
+      },
+      "logging": {
+        "title": "Protokoll",
+        "description": "Das Protokoll enthält personenbezogene Daten (Zeiten, IP-Adressen, Geräte). Informiere deine Mitarbeiter darüber und speichere nur so lange wie nötig.",
+        "data": {
+          "log_logins": "Anmeldungen und Fehlversuche protokollieren",
+          "log_sessions": "Sitzungen protokollieren (wann App/Browser geöffnet war)",
+          "log_denied": "Gesperrte Zugriffsversuche protokollieren",
+          "retention_days": "Aufbewahrung"
+        }
+      }
+    },
+    "abort": {
+      "no_users": "Es gibt keine Benutzer, die eingeschränkt werden können."
+    }
+  },
+  "selector": {
+    "areas": {
+      "options": {
+        "media": "Medien – Medienbrowser inkl. UniFi-Protect-Clips",
+        "cameras": "Kameras – Livebilder, Snapshots, Aufnahmen, Kamera-Entitäten",
+        "energy": "Energie",
+        "history": "Verlauf",
+        "logbook": "Logbuch",
+        "map": "Karte & Standorte (Personen, Geräte-Tracker)",
+        "todo": "To-do-Listen",
+        "calendar": "Kalender"
+      }
+    }
+  }
+}

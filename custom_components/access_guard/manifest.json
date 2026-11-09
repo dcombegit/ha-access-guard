@@ -1,0 +1,26 @@
+{
+  "domain": "access_guard",
+  "name": "Access Guard",
+  "after_dependencies": [
+    "calendar",
+    "camera",
+    "energy",
+    "history",
+    "logbook",
+    "lovelace",
+    "media_player",
+    "media_source",
+    "todo",
+    "unifiprotect"
+  ],
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": ["auth", "frontend", "http", "panel_custom", "websocket_api"],
+  "documentation": "https://github.com/dcombegit/ha-access-guard",
+  "integration_type": "service",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/dcombegit/ha-access-guard/issues",
+  "requirements": [],
+  "single_config_entry": true,
+  "version": "1.0.0"
+}

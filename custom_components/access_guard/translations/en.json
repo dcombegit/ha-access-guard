@@ -1,0 +1,74 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up Access Guard",
+        "description": "Access Guard restricts individual users (sidebar, media, cameras, …) and logs who signed in when and from which device. Settings are under “Configure”, the overview is the new “Access” sidebar item."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Access Guard is already set up."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Access Guard",
+        "menu_options": {
+          "select_user": "Restrict a user",
+          "logging": "Log settings"
+        }
+      },
+      "select_user": {
+        "title": "Choose user",
+        "description": "Restrictions apply to every device of this user. For administrators they only partly apply – staff should be regular users.",
+        "data": {
+          "user_id": "User"
+        }
+      },
+      "restrictions": {
+        "title": "Restrictions for {user}",
+        "description": "**Blocked** means removed from the sidebar and also unreachable by link or API. **Hidden** only removes it from the sidebar. Open browser tabs pick up changes after a reload.",
+        "data": {
+          "blocked_areas": "Blocked areas",
+          "blocked_dashboards": "Blocked dashboards",
+          "hidden_panels": "Hidden sidebar items",
+          "hidden_entities": "Hidden entities"
+        },
+        "data_description": {
+          "blocked_areas": "Blocks the area including its data. History, logbook, to-do and calendar cards on dashboards stop working too.",
+          "blocked_dashboards": "The user can neither see nor open these dashboards.",
+          "hidden_panels": "Hide only – still reachable by link.",
+          "hidden_entities": "The user can't see these entities anywhere (dashboards, search, history) or control them."
+        }
+      },
+      "logging": {
+        "title": "Log",
+        "description": "The log contains personal data (times, IP addresses, devices). Inform your staff and keep it only as long as needed.",
+        "data": {
+          "log_logins": "Log sign-ins and failed attempts",
+          "log_sessions": "Log sessions (when the app/browser was open)",
+          "log_denied": "Log blocked access attempts",
+          "retention_days": "Retention"
+        }
+      }
+    },
+    "abort": {
+      "no_users": "There are no users that can be restricted."
+    }
+  },
+  "selector": {
+    "areas": {
+      "options": {
+        "media": "Media – media browser incl. UniFi Protect clips",
+        "cameras": "Cameras – live view, snapshots, recordings, camera entities",
+        "energy": "Energy",
+        "history": "History",
+        "logbook": "Logbook",
+        "map": "Map & locations (persons, device trackers)",
+        "todo": "To-do lists",
+        "calendar": "Calendar"
+      }
+    }
+  }
+}
